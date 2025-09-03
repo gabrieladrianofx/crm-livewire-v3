@@ -1,5 +1,5 @@
 includes:
-    - ./vendor/larastan/larastan/extension.neon
+    - ./vendor/nunomaduro/larastan/extension.neon
 parameters:
 
     paths:
@@ -8,5 +8,5 @@ parameters:
 
     level: 5
 
-    ignoreErrors:
-        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany::[a-zA-Z_]+\(\)#'
+#    ignoreErrors:
+#        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany::[a-zA-Z_]+\(\)*#'
