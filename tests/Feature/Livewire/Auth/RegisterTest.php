@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Auth\Register;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 
@@ -29,6 +30,10 @@ it('should be able to register a new user in the system', function () {
     );
 
     $this->assertDatabaseCount('users', 1);
+
+    expect(auth()->check())
+        ->and(auth()->user())
+        ->id->toBe(User::first()->id);
 });
 
 it('validation rules', function ($f) {
